@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J Soares · Seja meu parceiro de negócios</title>
+<meta name="description" content="João Pedro Soares conecta empresários a especialistas de confiança em contabilidade, perícia, auditoria e planejamento tributário. Seja meu parceiro de negócios.">
+<meta property="og:title" content="J Soares · Seja meu parceiro de negócios">
+<meta property="og:description" content="Conexões certas para quem constrói empresa: contabilidade, perícia, auditoria e planejamento tributário.">
+<meta property="og:image" content="https://jotasoares.com/img/joao-pedro-soares.png">
+<meta property="og:url" content="https://jotasoares.com">
+<meta name="theme-color" content="#141414">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="css/marca.css">
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: var(--preto); color: var(--papel); }
+  a { color: inherit; }
+  .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .mono-rot { font-family: var(--f-mono); font-weight: 500; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--laranja); }
+
+  /* Topo */
+  header { position: sticky; top: 0; z-index: 10; background: rgba(20,20,20,.88); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(242,238,230,.08); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  header img { height: 50px; display: block; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; font-weight: 700; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .15s, background .15s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-laranja { background: var(--laranja); color: var(--preto); }
+  .btn-linha { border-color: rgba(242,238,230,.25); color: var(--papel); }
+  .btn-linha:hover { border-color: var(--papel); }
+  header .btn { padding: 10px 16px; font-size: 14px; }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; padding: 96px 0 104px; }
+  .hero .j { position: absolute; right: -60px; top: -170px; width: 520px; opacity: .3; pointer-events: none; }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.35fr .65fr; gap: 56px; align-items: center; }
+  .hero h1 { font-weight: 800; font-size: clamp(40px, 6vw, 76px); letter-spacing: -.035em; line-height: 1.02; margin-top: 18px; }
+  .hero h1 .serif { color: var(--laranja); font-size: 1.22em; letter-spacing: -.01em; }
+  .hero p.lead { font-size: clamp(17px, 2vw, 20px); line-height: 1.6; color: #CFCAC1; margin-top: 26px; max-width: 34em; }
+  .hero .acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+  .foto { position: relative; justify-self: end; }
+  .foto img { width: 100%; height: auto; max-width: 340px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 2px solid var(--laranja); display: block; }
+  .foto .legenda { margin-top: 18px; text-align: center; font-size: 14px; color: var(--cinza-preto); }
+  .foto .legenda b { display: block; color: var(--papel); font-size: 17px; margin-bottom: 2px; }
+
+  /* Seções em papel */
+  .papel { color: var(--preto); }
+  section.bloco { padding: 96px 0; }
+  h2 { font-weight: 800; font-size: clamp(32px, 4.4vw, 52px); letter-spacing: -.03em; line-height: 1.05; margin-top: 14px; max-width: 18em; }
+  h2 .serif { color: var(--laranja); font-size: 1.18em; }
+  .passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+  .passo { border-top: 2px solid var(--preto); padding-top: 22px; }
+  .passo .n { font-family: var(--f-mono); color: var(--laranja); font-size: 14px; }
+  .passo h3 { font-size: 22px; font-weight: 800; letter-spacing: -.01em; margin: 10px 0 8px; }
+  .passo p { font-size: 16px; line-height: 1.6; color: #3A3733; }
+
+  .areas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 48px; background: rgba(242,238,230,.12); border: 1px solid rgba(242,238,230,.12); }
+  .area { background: var(--preto); padding: 28px 24px 30px; }
+  .area img { width: 44px; height: 44px; display: block; }
+  .area h3 { font-size: 19px; font-weight: 800; margin: 18px 0 8px; }
+  .area p { font-size: 15px; line-height: 1.55; color: var(--cinza-preto); }
+
+  .sobre .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: start; }
+  .linha-tempo { list-style: none; margin-top: 8px; }
+  .linha-tempo li { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(20,20,20,.14); font-size: 16px; line-height: 1.5; }
+  .linha-tempo .ano { font-family: var(--f-mono); font-size: 13px; color: #6B665E; padding-top: 3px; }
+  .linha-tempo b { font-weight: 800; }
+  .sobre p.texto { font-size: 18px; line-height: 1.7; color: #2A2826; margin-top: 22px; }
+
+  .parceiro { position: relative; overflow: hidden; text-align: left; }
+  .parceiro .j { position: absolute; right: -40px; bottom: -160px; width: 420px; opacity: .22; pointer-events: none; }
+  .parceiro .wrap { position: relative; }
+  .parceiro h2 { font-size: clamp(42px, 7vw, 92px); max-width: none; }
+  .parceiro p { font-size: 19px; line-height: 1.6; color: #CFCAC1; max-width: 38em; margin-top: 22px; }
+  .quem { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .quem span { font-family: var(--f-mono); font-size: 13px; padding: 8px 12px; border: 1px solid rgba(242,238,230,.2); color: var(--papel); }
+  .parceiro .acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+
+  footer { border-top: 1px solid rgba(242,238,230,.1); padding: 40px 0 56px; font-size: 13px; color: var(--cinza-preto); line-height: 1.7; }
+  footer .wrap { display: grid; grid-template-columns: 1fr auto; gap: 24px; }
+  footer nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  footer nav a { text-decoration: none; color: var(--papel); }
+  footer .aviso { grid-column: 1 / -1; max-width: 60em; }
+
+  @media (max-width: 860px) {
+    .hero { padding: 56px 0 72px; }
+    .hero .wrap, .sobre .wrap { grid-template-columns: 1fr; gap: 40px; }
+    .foto { justify-self: start; } .foto img { max-width: 200px; } .foto .legenda { text-align: left; }
+    .hero .j { width: 340px; right: -120px; }
+    .passos { grid-template-columns: 1fr; }
+    .areas { grid-template-columns: 1fr 1fr; }
+    section.bloco { padding: 72px 0; }
+    .linha-tempo li { grid-template-columns: 1fr; gap: 2px; }
+    footer .wrap { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 520px) { .areas { grid-template-columns: 1fr; } header img { height: 34px; } }
+</style>
+</head>
+<body class="fundo-preto">
+
+<header>
+  <div class="wrap">
+    <a href="#topo" aria-label="J Soares, início"><img src="img/logo.svg" alt="J Soares"></a>
+    <a class="btn btn-laranja" href="#parceiro">Seja meu parceiro</a>
+  </div>
+</header>
+
+<main id="topo">
+  <section class="hero">
+    <img class="j" src="img/simbolo.svg" alt="">
+    <div class="wrap">
+      <div>
+        <div class="mono-rot">Contabilidade · Direito · Negócios</div>
+        <h1>Conexões certas para quem <span class="serif">constrói empresa</span>.</h1>
+        <p class="lead">Sou João Pedro Soares e vivo entre o Direito e a Contabilidade. Conecto empresários a especialistas de confiança em contabilidade, perícia, auditoria e planejamento tributário, e explico a reforma tributária sem juridiquês.</p>
+        <div class="acoes">
+          <a class="btn btn-laranja" href="https://wa.me/553491330130?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Pedro!%20Vim%20pelo%20site%20e%20quero%20conversar%20sobre%20uma%20parceria." target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <a class="btn btn-linha" href="https://instagram.com/jotaosoares" target="_blank" rel="noopener">Ver os conteúdos</a>
+        </div>
+      </div>
+      <div class="foto">
+        <img src="img/joao-pedro-soares.png" alt="João Pedro Soares" width="340" height="340">
+        <div class="legenda"><b>João Pedro Soares</b>Conexões e parcerias</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco papel fundo-papel" id="como">
+    <div class="wrap">
+      <div class="mono-rot">Como funciona</div>
+      <h2>Você traz o desafio. Eu trago <span class="serif">quem resolve</span>.</h2>
+      <div class="passos">
+        <div class="passo"><span class="n">01</span><h3>Conversa</h3><p>Você me conta o que a empresa precisa: organizar a contabilidade, revisar impostos, resolver uma perícia ou se preparar para a reforma tributária.</p></div>
+        <div class="passo"><span class="n">02</span><h3>Conexão</h3><p>Eu indico o especialista certo da minha rede: profissionais e escritórios de confiança, habilitados para o seu caso.</p></div>
+        <div class="passo"><span class="n">03</span><h3>Acompanhamento</h3><p>Fico junto até a solução andar. Relacionamento de longo prazo, não um contato perdido.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="areas">
+    <div class="wrap">
+      <div class="mono-rot">Onde a minha rede atua</div>
+      <h2>Especialistas para cada <span class="serif">decisão</span>.</h2>
+      <div class="areas">
+        <div class="area"><img src="img/icones/contabilidade.svg" alt=""><h3>Assessoria contábil</h3><p>Contabilidade organizada para empresas que querem crescer com segurança.</p></div>
+        <div class="area"><img src="img/icones/reforma-tributaria.svg" alt=""><h3>Planejamento tributário</h3><p>Pagar o imposto certo, do jeito certo, inclusive na transição da reforma.</p></div>
+        <div class="area"><img src="img/icones/pericias.svg" alt=""><h3>Perícia contábil</h3><p>Peritos para processos judiciais, cálculos e laudos.</p></div>
+        <div class="area"><img src="img/icones/holding.svg" alt=""><h3>Auditoria e holding</h3><p>Auditoria, organização patrimonial e sucessão familiar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco papel fundo-papel sobre" id="sobre">
+    <div class="wrap">
+      <div>
+        <div class="mono-rot">Sobre</div>
+        <h2>Gestão, pessoas e <span class="serif">resultado</span>.</h2>
+        <p class="texto">Venho da gestão comercial e de equipes. Hoje uno essa experiência ao Direito e à Contabilidade para aproximar quem tem o problema de quem sabe resolver. Estou me especializando em Direito Tributário.</p>
+      </div>
+      <ul class="linha-tempo">
+        <li><span class="ano">Nov 2025 –</span><span><b>Sócio da JPS Serviços</b>: serviços contábeis e parcerias.</span></li>
+        <li><span class="ano">2024 – 2026</span><span><b>Jato Hub</b>: Head de Marketing e Comercial, depois Diretor de Equipes e Performance.</span></li>
+        <li><span class="ano">2024 – 2025</span><span><b>Canabisil</b>: COO.</span></li>
+        <li><span class="ano">2023 – 2024</span><span><b>Microvip</b>: professor.</span></li>
+        <li><span class="ano">até 2027</span><span><b>Direito na UNITRI</b>, com foco em tributário.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bloco parceiro" id="parceiro">
+    <img class="j" src="img/simbolo.svg" alt="">
+    <div class="wrap">
+      <div class="mono-rot">Parcerias</div>
+      <h2>Seja meu <span class="serif">parceiro</span> de negócios.</h2>
+      <p>Sou bem relacionado em Direito e Contabilidade e estou sempre conectando empresas. Se você é empresário ou tem um escritório e acredita em fazer negócios com quem confia, vamos conversar.</p>
+      <div class="quem"><span>Empresários</span><span>Escritórios de contabilidade</span><span>Peritos e auditores</span><span>Marketing e tecnologia</span></div>
+      <div class="acoes">
+        <a class="btn btn-laranja" href="https://wa.me/553491330130?text=Ol%C3%A1%2C%20Jo%C3%A3o%20Pedro!%20Quero%20ser%20seu%20parceiro%20de%20neg%C3%B3cios." target="_blank" rel="noopener">Quero ser parceiro</a>
+        <a class="btn btn-linha" href="mailto:servicos@jotasoares.com?subject=Parceria%20de%20neg%C3%B3cios">servicos@jotasoares.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>J Soares<span style="color:var(--laranja)">.</span> · Conexões e parcerias<br>+55 34 9133-0130 · servicos@jotasoares.com</div>
+    <nav><a href="https://instagram.com/jotaosoares" target="_blank" rel="noopener">Instagram</a><a href="cartao/">Cartão digital</a><a href="cartao/joao-pedro-soares.vcf">Salvar contato</a></nav>
+    <p class="aviso">A J Soares não presta serviços de advocacia nem de contabilidade. Esses serviços são realizados por profissionais e escritórios parceiros devidamente habilitados. A J Soares atua apenas na conexão entre as partes.</p>
+  </div>
+</footer>
+
+</body>
+</html>

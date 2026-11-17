@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- Cartão de visita digital J Soares. Página de celular; vai para jotasoares.com/cartao quando o site existir.
+     Também vira imagem (1080x1920) para mandar no WhatsApp. -->
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>João Pedro Soares · J Soares</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/marca.css">
+<style>
+  body { min-height: 100vh; display: flex; justify-content: center; }
+  html.exporta { zoom: 2.5; }           /* ?exporta=1 -> imagem 1080x1920 */
+  html.exporta body { width: 432px; height: 768px; min-height: 0; overflow: hidden; }
+  html.exporta .cartao { height: 768px; }
+  .cartao { width: 100%; max-width: 432px; min-height: 768px; padding: 56px 32px 40px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+  .j { position: absolute; right: -70px; top: -30px; width: 300px; opacity: .55; pointer-events: none; }
+  .foto { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; border: 2px solid var(--laranja); position: relative; }
+  h1 { font-weight: 800; font-size: 32px; letter-spacing: -.02em; line-height: 1.05; margin-top: 28px; position: relative; }
+  .cargo { font-size: 16px; color: var(--cinza-preto); margin-top: 8px; }
+  .areas { font-size: 12px; text-transform: uppercase; color: var(--papel); margin-top: 18px; letter-spacing: .08em; }
+  .frase { font-size: 30px; line-height: 1.1; margin-top: 30px; }
+  .botoes { margin-top: auto; padding-top: 36px; display: grid; gap: 10px; }
+  .botoes a { display: flex; justify-content: space-between; align-items: center; padding: 15px 18px; border: 1px solid rgba(242,238,230,.18);
+              color: var(--papel); text-decoration: none; font-weight: 600; font-size: 15px; }
+  .botoes a .mono { font-weight: 400; font-size: 12px; color: var(--cinza-preto); }
+  .botoes a.principal { background: var(--laranja); border-color: var(--laranja); color: var(--preto); }
+  .botoes a.principal .mono { color: var(--preto); }
+  .rodape { margin-top: 26px; font-size: 11px; color: var(--cinza-preto); text-align: center; }
+</style></head>
+<body class="fundo-preto">
+<main class="cartao">
+  <img class="j" src="../img/simbolo.svg" alt="">
+  <img class="foto" src="../img/joao-pedro-soares.png" alt="João Pedro Soares">
+  <h1>João Pedro<br>Soares<span class="ponto"></span></h1>
+  <div class="cargo">Conexões e parcerias</div>
+  <div class="areas mono">Contabilidade · Direito · Holding</div>
+  <div class="frase serif">Seja meu <span class="laranja">parceiro</span> de negócios.</div>
+  <nav class="botoes">
+    <a class="principal" href="https://wa.me/553491330130">WhatsApp <span class="mono">+55 34 9133-0130</span></a>
+    <a href="mailto:servicos@jotasoares.com">E-mail <span class="mono">servicos@jotasoares.com</span></a>
+    <a href="https://instagram.com/jotaosoares">Instagram <span class="mono">@jotaosoares</span></a>
+    <a href="joao-pedro-soares.vcf" download>Salvar contato <span class="mono">.vcf</span></a>
+  </nav>
+  <div class="rodape mono">jotasoares.com</div>
+</main>
+<script>if (new URLSearchParams(location.search).get('exporta')) document.documentElement.classList.add('exporta');</script>
+</body></html>

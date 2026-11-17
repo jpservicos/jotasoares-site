@@ -1,0 +1,38 @@
+/* J Soares: base comum de todas as peças. Valores de 01-design-system/tokens/tokens.json */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=block');
+
+:root {
+  --preto: #141414;
+  --papel: #F2EEE6;
+  --laranja: #FF4F1A;
+  --cinza-papel: #8A857C;   /* texto secundário sobre papel (derivado: papel escurecido) */
+  --cinza-preto: #8F8B84;   /* texto secundário sobre preto */
+  --xs: 4px; --sm: 8px; --md: 16px; --lg: 32px; --xl: 64px;
+  --f-titulo: 'Inter', sans-serif;
+  --f-serif: 'Instrument Serif', serif;
+  --f-mono: 'IBM Plex Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; }
+body { font-family: var(--f-titulo); -webkit-font-smoothing: antialiased; }
+
+/* Texturas foscas: ruído fino (fibra de papel) + vinheta leve */
+.fundo-papel {
+  background-color: var(--papel);
+  background-image:
+    radial-gradient(ellipse at 50% 45%, rgba(255,255,255,.35) 0%, rgba(0,0,0,0) 55%, rgba(60,45,25,.10) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .22 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .09' numOctaves='2' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .34 0 0 0 0 .25 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='600' height='600' filter='url(%23f)' opacity='.10'/%3E%3C/svg%3E");
+  color: var(--preto);
+}
+.fundo-preto {
+  background-color: var(--preto);
+  background-image:
+    radial-gradient(ellipse at 50% 40%, rgba(255,255,255,.045) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,.35) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+  color: var(--papel);
+}
+.laranja { color: var(--laranja); }
+.serif { font-family: var(--f-serif); font-style: italic; font-weight: 400; }
+.mono { font-family: var(--f-mono); font-weight: 500; letter-spacing: .02em; }
+.ponto { display: inline-block; width: .16em; height: .16em; background: var(--laranja); vertical-align: baseline; margin-left: .04em; }
